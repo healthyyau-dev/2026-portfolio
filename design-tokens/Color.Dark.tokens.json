@@ -1,0 +1,188 @@
+{
+  "Brand": {
+    "Primary_alternative": {
+      "$type": "color",
+      "$value": "#a68efc"
+    },
+    "Primary": {
+      "$type": "color",
+      "$value": "#121212"
+    },
+    "Secondary": {
+      "$type": "color",
+      "$value": "#272727"
+    },
+    "Tetiary": {
+      "$type": "color",
+      "$value": "#383838"
+    },
+    "Content": {
+      "$type": "color",
+      "$value": "#e2dbff"
+    },
+    "Content_contrast": {
+      "$type": "color",
+      "$value": "#000000"
+    }
+  },
+  "Content": {
+    "Primary": {
+      "$type": "color",
+      "$value": "#ffffff"
+    },
+    "Secondary": {
+      "$type": "color",
+      "$value": "#e6e6e6"
+    },
+    "Tertiary": {
+      "$type": "color",
+      "$value": "#b3b3b3"
+    },
+    "Contrast": {
+      "$type": "color",
+      "$value": "#909090"
+    },
+    "Disabled": {
+      "$type": "color",
+      "$value": "#5b5b5b"
+    },
+    "Inverse": {
+      "$type": "color",
+      "$value": "#000000"
+    },
+    "Brand": {
+      "$type": "color",
+      "$value": "#a68efc"
+    }
+  },
+  "Stroke": {
+    "Primary": {
+      "$type": "color",
+      "$value": "#383838"
+    },
+    "Secondary": {
+      "$type": "color",
+      "$value": "#4d4d4d"
+    },
+    "Tertiary": {
+      "$type": "color",
+      "$value": "#0e0e0e"
+    },
+    "Contrast": {
+      "$type": "color",
+      "$value": "#000000"
+    }
+  },
+  "Background": {
+    "Surface": {
+      "Color": {
+        "$type": "color",
+        "$value": "#ffffff"
+      },
+      "Primary": {
+        "$type": "color",
+        "$value": "#1d1d1d"
+      },
+      "Secondary": {
+        "$type": "color",
+        "$value": "#121212"
+      },
+      "Disabled": {
+        "$type": "color",
+        "$value": "#0d0d0d"
+      },
+      "Contrast": {
+        "$type": "color",
+        "$value": "#272727"
+      },
+      "Pressed": {
+        "$type": "color",
+        "$value": "#383838"
+      },
+      "Brand": {
+        "$type": "color",
+        "$value": "#a68efc"
+      }
+    },
+    "Base": {
+      "Primary": {
+        "$type": "color",
+        "$value": "#000000"
+      },
+      "Secondary": {
+        "$type": "color",
+        "$value": "#121212"
+      }
+    }
+  },
+  "Container": {
+    "Primary": {
+      "$type": "color",
+      "$value": "#272727"
+    },
+    "Secondary": {
+      "$type": "color",
+      "$value": "#272727"
+    },
+    "Tertiary": {
+      "$type": "color",
+      "$value": "#383838"
+    },
+    "Contrast": {
+      "$type": "color",
+      "$value": "#ffffff"
+    },
+    "Inverse": {
+      "$type": "color",
+      "$value": "#fafafa"
+    }
+  },
+  "Semantic": {
+    "Neutral": {
+      "$type": "color",
+      "$value": "#ffffff"
+    },
+    "Notice": {
+      "$type": "color",
+      "$value": "#ffb117"
+    },
+    "Positive": {
+      "$type": "color",
+      "$value": "#25a750"
+    },
+    "Negative": {
+      "$type": "color",
+      "$value": "#ca3f64"
+    },
+    "Informative": {
+      "$type": "color",
+      "$value": "#5f6fff"
+    },
+    "Highlight": {
+      "$type": "color",
+      "$value": "#a68efc"
+    }
+  },
+  "Data_Visualization": {
+    "Category_01": {
+      "$type": "color",
+      "$value": "#5f6fff"
+    },
+    "Category_02": {
+      "$type": "color",
+      "$value": "#ffb117"
+    },
+    "Category_03": {
+      "$type": "color",
+      "$value": "#a68efc"
+    },
+    "Category_04": {
+      "$type": "color",
+      "$value": "#00bc4b"
+    },
+    "Category_05": {
+      "$type": "color",
+      "$value": "#f5384f"
+    }
+  }
+}

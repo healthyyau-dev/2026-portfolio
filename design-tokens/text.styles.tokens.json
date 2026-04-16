@@ -1,0 +1,318 @@
+{
+  "Heading": {
+    "H1": {
+      "$type": "typography",
+      "$description": "Display. Used for hero headlines and primary page statements.",
+      "$value": {
+        "fontFamily": "Aeonik",
+        "fontSize": "{Font size.96}",
+        "fontWeight": 700,
+        "letterSpacing": "0%",
+        "lineHeight": "{Line height.96}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    },
+    "H2": {
+      "$type": "typography",
+      "$description": "Key numeric values, KPIs, and high emphasis figures.",
+      "$value": {
+        "fontFamily": "Aeonik",
+        "fontSize": "{Font size.72}",
+        "fontWeight": 700,
+        "letterSpacing": "0%",
+        "lineHeight": "{Number.88}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    },
+    "H3": {
+      "$type": "typography",
+      "$description": "Primary section header",
+      "$value": {
+        "fontFamily": "Aeonik",
+        "fontSize": "{h3.font-size}",
+        "fontWeight": 700,
+        "letterSpacing": "0%",
+        "lineHeight": "{h3.line-height}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    },
+    "H4": {
+      "$type": "typography",
+      "$description": "Secondary section header, Widget/Card header 1",
+      "$value": {
+        "fontFamily": "Aeonik",
+        "fontSize": "{Font size.32}",
+        "fontWeight": 700,
+        "letterSpacing": "0%",
+        "lineHeight": "{Line height.36}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    },
+    "H5": {
+      "$type": "typography",
+      "$description": "Widget/card header 2",
+      "$value": {
+        "fontFamily": "Aeonik",
+        "fontSize": "{Font size.24}",
+        "fontWeight": 700,
+        "letterSpacing": "0%",
+        "lineHeight": "{Line height.32}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    },
+    "H6": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Aeonik",
+        "fontSize": "{Font size.20}",
+        "fontWeight": 700,
+        "letterSpacing": "0%",
+        "lineHeight": "{Line height.28}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    }
+  },
+  "Body": {
+    "Body lg": {
+      "$type": "typography",
+      "$description": "Intro article",
+      "$value": {
+        "fontFamily": "Aeonik",
+        "fontSize": "{Font size.18}",
+        "fontWeight": 400,
+        "letterSpacing": "0%",
+        "lineHeight": "{body-md.line-height}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    },
+    "Body md": {
+      "$type": "typography",
+      "$description": "Body copy",
+      "$value": {
+        "fontFamily": "Aeonik",
+        "fontSize": "{Font size.16}",
+        "fontWeight": 400,
+        "letterSpacing": "0%",
+        "lineHeight": "{Line height.16}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    },
+    "Body sm": {
+      "$type": "typography",
+      "$description": "Body copy",
+      "$value": {
+        "fontFamily": "Aeonik",
+        "fontSize": "{Font size.14}",
+        "fontWeight": 400,
+        "letterSpacing": "0%",
+        "lineHeight": "{Line height.14}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    },
+    "Body xs": {
+      "$type": "typography",
+      "$description": "Caption",
+      "$value": {
+        "fontFamily": "Aeonik",
+        "fontSize": "{Font size.12}",
+        "fontWeight": 400,
+        "letterSpacing": "0%",
+        "lineHeight": "{Line height.16}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    },
+    "Body lg underlined": {
+      "$type": "typography",
+      "$description": "Hyperlink",
+      "$value": {
+        "fontFamily": "Aeonik",
+        "fontSize": "{Font size.18}",
+        "fontWeight": 400,
+        "letterSpacing": "0%",
+        "lineHeight": "{Line height.24}",
+        "textTransform": "none",
+        "textDecoration": "underline"
+      }
+    },
+    "Body md underlined": {
+      "$type": "typography",
+      "$description": "Hyperlink",
+      "$value": {
+        "fontFamily": "Aeonik",
+        "fontSize": "{Font size.16}",
+        "fontWeight": 400,
+        "letterSpacing": "0%",
+        "lineHeight": "{Line height.24}",
+        "textTransform": "none",
+        "textDecoration": "underline"
+      }
+    },
+    "Body md dashed": {
+      "$type": "typography",
+      "$description": "Content reveals additional information on hover",
+      "$value": {
+        "fontFamily": "Aeonik",
+        "fontSize": "{Font size.16}",
+        "fontWeight": 400,
+        "letterSpacing": "0%",
+        "lineHeight": "{Line height.24}",
+        "textTransform": "none",
+        "textDecoration": "underline"
+      }
+    },
+    "Body sm underlined": {
+      "$type": "typography",
+      "$description": "Hyperlink",
+      "$value": {
+        "fontFamily": "Aeonik",
+        "fontSize": "{Font size.14}",
+        "fontWeight": 400,
+        "letterSpacing": "0%",
+        "lineHeight": "{Line height.20}",
+        "textTransform": "none",
+        "textDecoration": "underline"
+      }
+    },
+    "Body xs underlined": {
+      "$type": "typography",
+      "$description": "Hyperlink",
+      "$value": {
+        "fontFamily": "Aeonik",
+        "fontSize": "{Font size.12}",
+        "fontWeight": 400,
+        "letterSpacing": "0%",
+        "lineHeight": "{Line height.16}",
+        "textTransform": "none",
+        "textDecoration": "underline"
+      }
+    }
+  },
+  "Label": {
+    "Label lg": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "Aeonik",
+        "fontSize": "{Font size.18}",
+        "fontWeight": 500,
+        "letterSpacing": "0%",
+        "lineHeight": "{body-md.line-height}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    },
+    "Label md": {
+      "$type": "typography",
+      "$description": "Body copy",
+      "$value": {
+        "fontFamily": "Aeonik",
+        "fontSize": "{Font size.16}",
+        "fontWeight": 500,
+        "letterSpacing": "0%",
+        "lineHeight": "{Line height.24}",
+        "textTransform": "none",
+        "textDecoration": "underline"
+      }
+    },
+    "Label sm": {
+      "$type": "typography",
+      "$description": "Body copy",
+      "$value": {
+        "fontFamily": "Aeonik",
+        "fontSize": "{Font size.14}",
+        "fontWeight": 500,
+        "letterSpacing": "0%",
+        "lineHeight": "{Line height.20}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    },
+    "Label xs": {
+      "$type": "typography",
+      "$description": "Caption",
+      "$value": {
+        "fontFamily": "Aeonik",
+        "fontSize": "{Font size.12}",
+        "fontWeight": 500,
+        "letterSpacing": "0%",
+        "lineHeight": "{Line height.16}",
+        "textTransform": "none",
+        "textDecoration": "none"
+      }
+    },
+    "Label lg underlined": {
+      "$type": "typography",
+      "$description": "Hyperlink",
+      "$value": {
+        "fontFamily": "Aeonik",
+        "fontSize": "{Font size.18}",
+        "fontWeight": 500,
+        "letterSpacing": "0%",
+        "lineHeight": "{Line height.24}",
+        "textTransform": "none",
+        "textDecoration": "underline"
+      }
+    },
+    "Label md underlined": {
+      "$type": "typography",
+      "$description": "Hyperlink",
+      "$value": {
+        "fontFamily": "Aeonik",
+        "fontSize": "{Font size.16}",
+        "fontWeight": 500,
+        "letterSpacing": "0%",
+        "lineHeight": "{Line height.24}",
+        "textTransform": "none",
+        "textDecoration": "underline"
+      }
+    },
+    "Label md dashed": {
+      "$type": "typography",
+      "$description": "Content reveals additional information on hover",
+      "$value": {
+        "fontFamily": "Aeonik",
+        "fontSize": "{Font size.16}",
+        "fontWeight": 500,
+        "letterSpacing": "0%",
+        "lineHeight": "{Line height.24}",
+        "textTransform": "none",
+        "textDecoration": "underline"
+      }
+    },
+    "Label sm underlined": {
+      "$type": "typography",
+      "$description": "Hyperlink",
+      "$value": {
+        "fontFamily": "Aeonik",
+        "fontSize": "{Font size.14}",
+        "fontWeight": 500,
+        "letterSpacing": "0%",
+        "lineHeight": "{Line height.20}",
+        "textTransform": "none",
+        "textDecoration": "underline"
+      }
+    },
+    "Label xs underlined": {
+      "$type": "typography",
+      "$description": "Hyperlink",
+      "$value": {
+        "fontFamily": "Aeonik",
+        "fontSize": "{Font size.12}",
+        "fontWeight": 500,
+        "letterSpacing": "0%",
+        "lineHeight": "{Line height.16}",
+        "textTransform": "none",
+        "textDecoration": "underline"
+      }
+    }
+  }
+}

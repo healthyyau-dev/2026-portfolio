@@ -1,0 +1,137 @@
+/* ============================================
+   FONT FACES — Aeonik
+   ============================================ */
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('/src/fonts/Aeonik-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('/src/fonts/Aeonik-RegularItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('/src/fonts/Aeonik-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('/src/fonts/Aeonik-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('/src/fonts/Aeonik-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================================
+   DESIGN TOKENS — CSS Variables
+   ============================================ */
+
+:root {
+  /* Brand */
+  --color-brand-primary: #7a58f3;
+  --color-brand-primary-alt: #5728ff;
+  --color-brand-secondary: #ad97ff;
+
+  /* Content */
+  --color-content-primary: #000000;
+  --color-content-secondary: #383838;
+  --color-content-tertiary: #5b5b5b;
+  --color-content-contrast: #909090;
+  --color-content-disabled: #b3b3b3;
+  --color-content-inverse: #ffffff;
+  --color-content-brand: #7a58f3;
+
+  /* Stroke */
+  --color-stroke-primary: #e6e6e6;
+  --color-stroke-secondary: #b3b3b3;
+
+  /* Background */
+  --color-bg-base: #ffffff;
+  --color-bg-surface: #f3f3f3;
+  --color-bg-surface-brand: #7a58f3;
+
+  /* Container */
+  --color-container-primary: #ffffff;
+  --color-container-inverse: #0d0d0d;
+
+  /* Typography */
+  --font-family: 'Aeonik', system-ui, sans-serif;
+
+  /* Border radius */
+  --radius-8: 8px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-20: 20px;
+  --radius-24: 24px;
+  --radius-999: 999px;
+}
+
+[data-theme='dark'] {
+  --color-brand-primary: #a68efc;
+  --color-brand-primary-alt: #a68efc;
+  --color-brand-secondary: #272727;
+
+  --color-content-primary: #ffffff;
+  --color-content-secondary: #e6e6e6;
+  --color-content-tertiary: #b3b3b3;
+  --color-content-contrast: #909090;
+  --color-content-disabled: #5b5b5b;
+  --color-content-inverse: #000000;
+  --color-content-brand: #a68efc;
+
+  --color-stroke-primary: #383838;
+  --color-stroke-secondary: #4d4d4d;
+
+  --color-bg-base: #000000;
+  --color-bg-base-secondary: #121212;
+  --color-bg-surface: #1d1d1d;
+  --color-bg-surface-brand: #a68efc;
+
+  --color-container-primary: #272727;
+  --color-container-inverse: #fafafa;
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: none !important;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg-base);
+  color: var(--color-content-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}

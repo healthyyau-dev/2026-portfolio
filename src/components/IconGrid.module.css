@@ -1,0 +1,60 @@
+.wrapper {
+  position: absolute;
+  right: -120px;
+  bottom: -80px;
+  width: 680px;
+  height: 620px;
+  pointer-events: none;
+  /* Fade out at edges */
+  mask-image: radial-gradient(
+    ellipse 80% 80% at 60% 60%,
+    black 40%,
+    transparent 80%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse 80% 80% at 60% 60%,
+    black 40%,
+    transparent 80%
+  );
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  grid-template-rows: repeat(4, 100px);
+  gap: 12px;
+
+  /* Isometric-style perspective transform matching the Figma design */
+  transform:
+    perspective(900px)
+    rotateX(48deg)
+    rotateZ(-30deg)
+    translateY(-40px);
+  transform-origin: center center;
+  transform-style: preserve-3d;
+}
+
+.tile {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background: var(--color-container-primary);
+  border: 1px solid var(--color-stroke-primary);
+  color: var(--color-content-tertiary);
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+  transition: background 0.2s ease;
+}
+
+.tile.highlight {
+  background: linear-gradient(145deg, #5d3fd3 0%, #3a1fa8 100%);
+  border-color: rgba(166, 142, 252, 0.3);
+  color: #ffffff;
+  box-shadow:
+    0 4px 20px rgba(90, 60, 200, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+}

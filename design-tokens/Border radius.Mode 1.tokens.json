@@ -1,0 +1,46 @@
+{
+  "2": {
+    "$type": "dimension",
+    "$value": "2px"
+  },
+  "4": {
+    "$type": "dimension",
+    "$value": "4px"
+  },
+  "6": {
+    "$type": "dimension",
+    "$value": "6px"
+  },
+  "8": {
+    "$type": "dimension",
+    "$value": "8px"
+  },
+  "12": {
+    "$type": "dimension",
+    "$value": "12px"
+  },
+  "16": {
+    "$type": "dimension",
+    "$value": "16px"
+  },
+  "20": {
+    "$type": "dimension",
+    "$value": "20px"
+  },
+  "24": {
+    "$type": "dimension",
+    "$value": "24px"
+  },
+  "32": {
+    "$type": "dimension",
+    "$value": "32px"
+  },
+  "48": {
+    "$type": "dimension",
+    "$value": "48px"
+  },
+  "999": {
+    "$type": "dimension",
+    "$value": "999px"
+  }
+}

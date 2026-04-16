@@ -1,0 +1,442 @@
+{
+  "colors": {
+    "light": {
+      "brand": {
+        "primary": "#7a58f3",
+        "primary_alternative": "#5728ff",
+        "secondary": "#ad97ff",
+        "tertiary": "#c9baff",
+        "content": "#e2dbff",
+        "content_contrast": "#e2dbff"
+      },
+      "content": {
+        "primary": "#000000",
+        "secondary": "#383838",
+        "tertiary": "#5b5b5b",
+        "contrast": "#909090",
+        "disabled": "#b3b3b3",
+        "inverse": "#ffffff",
+        "brand": "#7a58f3"
+      },
+      "stroke": {
+        "primary": "#e6e6e6",
+        "secondary": "#b3b3b3",
+        "tertiary": "#f3f3f3",
+        "contrast": "#fafafa"
+      },
+      "background": {
+        "surface": {
+          "color": "#ffffff",
+          "primary": "#f3f3f3",
+          "secondary": "#f6f6f6",
+          "disabled": "#fafafa",
+          "contrast": "#aaaaaa",
+          "pressed": "#d9d9d9",
+          "brand": "#7a58f3"
+        },
+        "base": {
+          "primary": "#ffffff",
+          "secondary": "#f3f3f3"
+        }
+      },
+      "container": {
+        "primary": "#ffffff",
+        "secondary": "#fafafa",
+        "tertiary": "#ffffff",
+        "contrast": "#414141",
+        "inverse": "#0d0d0d"
+      },
+      "semantic": {
+        "neutral": "#000000",
+        "notice": "#ffb117",
+        "positive": "#31bd65",
+        "negative": "#eb4b6d",
+        "informative": "#8aa1ff",
+        "highlight": "#8b6df7"
+      },
+      "data_visualization": {
+        "category_01": "#8aa1ff",
+        "category_02": "#ffb117",
+        "category_03": "#8b6df7",
+        "category_04": "#12e366",
+        "category_05": "#ff7888"
+      }
+    },
+    "dark": {
+      "brand": {
+        "primary": "#121212",
+        "primary_alternative": "#a68efc",
+        "secondary": "#272727",
+        "tertiary": "#383838",
+        "content": "#e2dbff",
+        "content_contrast": "#000000"
+      },
+      "content": {
+        "primary": "#ffffff",
+        "secondary": "#e6e6e6",
+        "tertiary": "#b3b3b3",
+        "contrast": "#909090",
+        "disabled": "#5b5b5b",
+        "inverse": "#000000",
+        "brand": "#a68efc"
+      },
+      "stroke": {
+        "primary": "#383838",
+        "secondary": "#4d4d4d",
+        "tertiary": "#0e0e0e",
+        "contrast": "#000000"
+      },
+      "background": {
+        "surface": {
+          "color": "#ffffff",
+          "primary": "#1d1d1d",
+          "secondary": "#121212",
+          "disabled": "#0d0d0d",
+          "contrast": "#272727",
+          "pressed": "#383838",
+          "brand": "#a68efc"
+        },
+        "base": {
+          "primary": "#000000",
+          "secondary": "#121212"
+        }
+      },
+      "container": {
+        "primary": "#272727",
+        "secondary": "#272727",
+        "tertiary": "#383838",
+        "contrast": "#ffffff",
+        "inverse": "#fafafa"
+      },
+      "semantic": {
+        "neutral": "#ffffff",
+        "notice": "#ffb117",
+        "positive": "#25a750",
+        "negative": "#ca3f64",
+        "informative": "#5f6fff",
+        "highlight": "#a68efc"
+      },
+      "data_visualization": {
+        "category_01": "#5f6fff",
+        "category_02": "#ffb117",
+        "category_03": "#a68efc",
+        "category_04": "#00bc4b",
+        "category_05": "#f5384f"
+      }
+    }
+  },
+  "typography": {
+    "font_family": {
+      "aeonik": "Aeonik"
+    },
+    "font_size": {
+      "8": "8px",
+      "10": "10px",
+      "12": "12px",
+      "14": "14px",
+      "16": "16px",
+      "18": "18px",
+      "20": "20px",
+      "24": "24px",
+      "28": "28px",
+      "32": "32px",
+      "36": "36px",
+      "40": "40px",
+      "44": "44px",
+      "48": "48px",
+      "52": "52px",
+      "56": "56px",
+      "64": "64px",
+      "72": "72px",
+      "80": "80px",
+      "88": "88px",
+      "96": "96px",
+      "128": "128px",
+      "256": "256px"
+    },
+    "line_height": {
+      "8": "8px",
+      "12": "12px",
+      "14": "14px",
+      "16": "16px",
+      "20": "20px",
+      "24": "24px",
+      "28": "28px",
+      "32": "32px",
+      "36": "36px",
+      "40": "40px",
+      "48": "48px",
+      "52": "52px",
+      "64": "64px",
+      "72": "72px",
+      "80": "80px",
+      "88": "88px",
+      "96": "96px"
+    },
+    "font_weight": {
+      "regular": 400,
+      "semi_bold": 600,
+      "bold": 700
+    }
+  },
+  "border_radius": {
+    "2": "2px",
+    "4": "4px",
+    "6": "6px",
+    "8": "8px",
+    "12": "12px",
+    "16": "16px",
+    "20": "20px",
+    "24": "24px",
+    "32": "32px",
+    "48": "48px",
+    "999": "999px"
+  },
+  "text_styles": {
+    "heading": {
+      "h1": {
+        "type": "typography",
+        "description": "Display. Used for hero headlines and primary page statements.",
+        "font_family": "Aeonik",
+        "font_size": "96px",
+        "font_weight": 700,
+        "line_height": "88px",
+        "letter_spacing": "0%",
+        "text_decoration": "none"
+      },
+      "h2": {
+        "type": "typography",
+        "description": "Key numeric values, KPIs, and high emphasis figures.",
+        "font_family": "Aeonik",
+        "font_size": "72px",
+        "font_weight": 700,
+        "line_height": "88px",
+        "letter_spacing": "0%",
+        "text_decoration": "none"
+      },
+      "h3": {
+        "type": "typography",
+        "description": "Primary section header",
+        "font_family": "Aeonik",
+        "font_size": "48px",
+        "font_weight": 700,
+        "line_height": "52px",
+        "letter_spacing": "0%",
+        "text_decoration": "none"
+      },
+      "h4": {
+        "type": "typography",
+        "description": "Secondary section header, Widget/Card header 1",
+        "font_family": "Aeonik",
+        "font_size": "32px",
+        "font_weight": 700,
+        "line_height": "36px",
+        "letter_spacing": "0%",
+        "text_decoration": "none"
+      },
+      "h5": {
+        "type": "typography",
+        "description": "Widget/card header 2",
+        "font_family": "Aeonik",
+        "font_size": "24px",
+        "font_weight": 700,
+        "line_height": "32px",
+        "letter_spacing": "0%",
+        "text_decoration": "none"
+      },
+      "h6": {
+        "type": "typography",
+        "description": "Subheading",
+        "font_family": "Aeonik",
+        "font_size": "20px",
+        "font_weight": 700,
+        "line_height": "28px",
+        "letter_spacing": "0%",
+        "text_decoration": "none"
+      }
+    },
+    "body": {
+      "lg": {
+        "type": "typography",
+        "description": "Intro article",
+        "font_family": "Aeonik",
+        "font_size": "18px",
+        "font_weight": 400,
+        "line_height": "24px",
+        "letter_spacing": "0%",
+        "text_decoration": "none"
+      },
+      "md": {
+        "type": "typography",
+        "description": "Body copy",
+        "font_family": "Aeonik",
+        "font_size": "16px",
+        "font_weight": 400,
+        "line_height": "24px",
+        "letter_spacing": "0%",
+        "text_decoration": "none"
+      },
+      "sm": {
+        "type": "typography",
+        "description": "Body copy",
+        "font_family": "Aeonik",
+        "font_size": "14px",
+        "font_weight": 400,
+        "line_height": "20px",
+        "letter_spacing": "0%",
+        "text_decoration": "none"
+      },
+      "xs": {
+        "type": "typography",
+        "description": "Caption",
+        "font_family": "Aeonik",
+        "font_size": "12px",
+        "font_weight": 400,
+        "line_height": "16px",
+        "letter_spacing": "0%",
+        "text_decoration": "none"
+      },
+      "lg_underlined": {
+        "type": "typography",
+        "description": "Hyperlink",
+        "font_family": "Aeonik",
+        "font_size": "18px",
+        "font_weight": 400,
+        "line_height": "24px",
+        "letter_spacing": "0%",
+        "text_decoration": "underline"
+      },
+      "md_underlined": {
+        "type": "typography",
+        "description": "Hyperlink",
+        "font_family": "Aeonik",
+        "font_size": "16px",
+        "font_weight": 400,
+        "line_height": "24px",
+        "letter_spacing": "0%",
+        "text_decoration": "underline"
+      },
+      "md_dashed": {
+        "type": "typography",
+        "description": "Content reveals additional information on hover",
+        "font_family": "Aeonik",
+        "font_size": "16px",
+        "font_weight": 400,
+        "line_height": "24px",
+        "letter_spacing": "0%",
+        "text_decoration": "underline"
+      },
+      "sm_underlined": {
+        "type": "typography",
+        "description": "Hyperlink",
+        "font_family": "Aeonik",
+        "font_size": "14px",
+        "font_weight": 400,
+        "line_height": "20px",
+        "letter_spacing": "0%",
+        "text_decoration": "underline"
+      },
+      "xs_underlined": {
+        "type": "typography",
+        "description": "Hyperlink",
+        "font_family": "Aeonik",
+        "font_size": "12px",
+        "font_weight": 400,
+        "line_height": "16px",
+        "letter_spacing": "0%",
+        "text_decoration": "underline"
+      }
+    },
+    "label": {
+      "lg": {
+        "type": "typography",
+        "font_family": "Aeonik",
+        "font_size": "18px",
+        "font_weight": 500,
+        "line_height": "24px",
+        "letter_spacing": "0%",
+        "text_decoration": "none"
+      },
+      "md": {
+        "type": "typography",
+        "description": "Body copy",
+        "font_family": "Aeonik",
+        "font_size": "16px",
+        "font_weight": 500,
+        "line_height": "24px",
+        "letter_spacing": "0%",
+        "text_decoration": "none"
+      },
+      "sm": {
+        "type": "typography",
+        "description": "Body copy",
+        "font_family": "Aeonik",
+        "font_size": "14px",
+        "font_weight": 500,
+        "line_height": "20px",
+        "letter_spacing": "0%",
+        "text_decoration": "none"
+      },
+      "xs": {
+        "type": "typography",
+        "description": "Caption",
+        "font_family": "Aeonik",
+        "font_size": "12px",
+        "font_weight": 500,
+        "line_height": "16px",
+        "letter_spacing": "0%",
+        "text_decoration": "none"
+      },
+      "lg_underlined": {
+        "type": "typography",
+        "description": "Hyperlink",
+        "font_family": "Aeonik",
+        "font_size": "18px",
+        "font_weight": 500,
+        "line_height": "24px",
+        "letter_spacing": "0%",
+        "text_decoration": "underline"
+      },
+      "md_underlined": {
+        "type": "typography",
+        "description": "Hyperlink",
+        "font_family": "Aeonik",
+        "font_size": "16px",
+        "font_weight": 500,
+        "line_height": "24px",
+        "letter_spacing": "0%",
+        "text_decoration": "underline"
+      },
+      "md_dashed": {
+        "type": "typography",
+        "description": "Content reveals additional information on hover",
+        "font_family": "Aeonik",
+        "font_size": "16px",
+        "font_weight": 500,
+        "line_height": "24px",
+        "letter_spacing": "0%",
+        "text_decoration": "underline"
+      },
+      "sm_underlined": {
+        "type": "typography",
+        "description": "Hyperlink",
+        "font_family": "Aeonik",
+        "font_size": "14px",
+        "font_weight": 500,
+        "line_height": "20px",
+        "letter_spacing": "0%",
+        "text_decoration": "underline"
+      },
+      "xs_underlined": {
+        "type": "typography",
+        "description": "Hyperlink",
+        "font_family": "Aeonik",
+        "font_size": "12px",
+        "font_weight": 500,
+        "line_height": "16px",
+        "letter_spacing": "0%",
+        "text_decoration": "underline"
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Design Tokens",
+  "collections": {
+    "Color": {
+      "modes": {
+        "Light": [
+          "Color.Light.tokens.json"
+        ],
+        "Dark": [
+          "Color.Dark.tokens.json"
+        ]
+      }
+    },
+    "Typography": {
+      "modes": {
+        "Mode 1": [
+          "Typography.Mode 1.tokens.json"
+        ]
+      }
+    },
+    "Border radius": {
+      "modes": {
+        "Mode 1": [
+          "Border radius.Mode 1.tokens.json"
+        ]
+      }
+    }
+  },
+  "styles": {
+    "text": [
+      "text.styles.tokens.json"
+    ]
+  }
+}

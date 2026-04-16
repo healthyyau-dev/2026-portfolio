@@ -1,0 +1,279 @@
+/* tokens.css - Auto-generated from design-tokens.json */
+/* Light mode is the default */
+
+:root {
+  /* ============================================
+     COLORS - LIGHT MODE (Default)
+     ============================================ */
+
+  /* Brand Colors */
+  --color-light-brand-primary: #7a58f3;
+  --color-light-brand-primary-alternative: #5728ff;
+  --color-light-brand-secondary: #ad97ff;
+  --color-light-brand-tertiary: #c9baff;
+  --color-light-brand-content: #e2dbff;
+  --color-light-brand-content-contrast: #e2dbff;
+
+  /* Content Colors */
+  --color-light-content-primary: #000000;
+  --color-light-content-secondary: #383838;
+  --color-light-content-tertiary: #5b5b5b;
+  --color-light-content-contrast: #909090;
+  --color-light-content-disabled: #b3b3b3;
+  --color-light-content-inverse: #ffffff;
+  --color-light-content-brand: #7a58f3;
+
+  /* Stroke Colors */
+  --color-light-stroke-primary: #e6e6e6;
+  --color-light-stroke-secondary: #b3b3b3;
+  --color-light-stroke-tertiary: #f3f3f3;
+  --color-light-stroke-contrast: #fafafa;
+
+  /* Background Surface Colors */
+  --color-light-background-surface-color: #ffffff;
+  --color-light-background-surface-primary: #f3f3f3;
+  --color-light-background-surface-secondary: #f6f6f6;
+  --color-light-background-surface-disabled: #fafafa;
+  --color-light-background-surface-contrast: #aaaaaa;
+  --color-light-background-surface-pressed: #d9d9d9;
+  --color-light-background-surface-brand: #7a58f3;
+
+  /* Background Base Colors */
+  --color-light-background-base-primary: #ffffff;
+  --color-light-background-base-secondary: #f3f3f3;
+
+  /* Container Colors */
+  --color-light-container-primary: #ffffff;
+  --color-light-container-secondary: #fafafa;
+  --color-light-container-tertiary: #ffffff;
+  --color-light-container-contrast: #414141;
+  --color-light-container-inverse: #0d0d0d;
+
+  /* Semantic Colors */
+  --color-light-semantic-neutral: #000000;
+  --color-light-semantic-notice: #ffb117;
+  --color-light-semantic-positive: #31bd65;
+  --color-light-semantic-negative: #eb4b6d;
+  --color-light-semantic-informative: #8aa1ff;
+  --color-light-semantic-highlight: #8b6df7;
+
+  /* Data Visualization Colors */
+  --color-light-data-viz-category-01: #8aa1ff;
+  --color-light-data-viz-category-02: #ffb117;
+  --color-light-data-viz-category-03: #8b6df7;
+  --color-light-data-viz-category-04: #12e366;
+  --color-light-data-viz-category-05: #ff7888;
+
+  /* ============================================
+     TYPOGRAPHY
+     ============================================ */
+
+  /* Font Family */
+  --font-family-aeonik: 'Aeonik', sans-serif;
+
+  /* Font Sizes */
+  --font-size-8: 8px;
+  --font-size-10: 10px;
+  --font-size-12: 12px;
+  --font-size-14: 14px;
+  --font-size-16: 16px;
+  --font-size-18: 18px;
+  --font-size-20: 20px;
+  --font-size-24: 24px;
+  --font-size-28: 28px;
+  --font-size-32: 32px;
+  --font-size-36: 36px;
+  --font-size-40: 40px;
+  --font-size-44: 44px;
+  --font-size-48: 48px;
+  --font-size-52: 52px;
+  --font-size-56: 56px;
+  --font-size-64: 64px;
+  --font-size-72: 72px;
+  --font-size-80: 80px;
+  --font-size-88: 88px;
+  --font-size-96: 96px;
+  --font-size-128: 128px;
+  --font-size-256: 256px;
+
+  /* Line Heights */
+  --line-height-8: 8px;
+  --line-height-12: 12px;
+  --line-height-14: 14px;
+  --line-height-16: 16px;
+  --line-height-20: 20px;
+  --line-height-24: 24px;
+  --line-height-28: 28px;
+  --line-height-32: 32px;
+  --line-height-36: 36px;
+  --line-height-40: 40px;
+  --line-height-48: 48px;
+  --line-height-52: 52px;
+  --line-height-64: 64px;
+  --line-height-72: 72px;
+  --line-height-80: 80px;
+  --line-height-88: 88px;
+  --line-height-96: 96px;
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+
+  /* ============================================
+     BORDER RADIUS
+     ============================================ */
+
+  --border-radius-2: 2px;
+  --border-radius-4: 4px;
+  --border-radius-6: 6px;
+  --border-radius-8: 8px;
+  --border-radius-12: 12px;
+  --border-radius-16: 16px;
+  --border-radius-20: 20px;
+  --border-radius-24: 24px;
+  --border-radius-32: 32px;
+  --border-radius-48: 48px;
+  --border-radius-999: 999px;
+
+  /* ============================================
+     TEXT STYLES (Pre-composed)
+     ============================================ */
+
+  /* Headings */
+  --text-h1-font-family: var(--font-family-aeonik);
+  --text-h1-font-size: var(--font-size-96);
+  --text-h1-font-weight: var(--font-weight-bold);
+  --text-h1-line-height: var(--line-height-88);
+
+  --text-h2-font-family: var(--font-family-aeonik);
+  --text-h2-font-size: var(--font-size-72);
+  --text-h2-font-weight: var(--font-weight-bold);
+  --text-h2-line-height: var(--line-height-88);
+
+  --text-h3-font-family: var(--font-family-aeonik);
+  --text-h3-font-size: var(--font-size-48);
+  --text-h3-font-weight: var(--font-weight-bold);
+  --text-h3-line-height: var(--line-height-52);
+
+  --text-h4-font-family: var(--font-family-aeonik);
+  --text-h4-font-size: var(--font-size-32);
+  --text-h4-font-weight: var(--font-weight-bold);
+  --text-h4-line-height: var(--line-height-36);
+
+  --text-h5-font-family: var(--font-family-aeonik);
+  --text-h5-font-size: var(--font-size-24);
+  --text-h5-font-weight: var(--font-weight-bold);
+  --text-h5-line-height: var(--line-height-32);
+
+  --text-h6-font-family: var(--font-family-aeonik);
+  --text-h6-font-size: var(--font-size-20);
+  --text-h6-font-weight: var(--font-weight-bold);
+  --text-h6-line-height: var(--line-height-28);
+
+  /* Body */
+  --text-body-lg-font-family: var(--font-family-aeonik);
+  --text-body-lg-font-size: var(--font-size-18);
+  --text-body-lg-font-weight: var(--font-weight-regular);
+  --text-body-lg-line-height: var(--line-height-24);
+
+  --text-body-md-font-family: var(--font-family-aeonik);
+  --text-body-md-font-size: var(--font-size-16);
+  --text-body-md-font-weight: var(--font-weight-regular);
+  --text-body-md-line-height: var(--line-height-24);
+
+  --text-body-sm-font-family: var(--font-family-aeonik);
+  --text-body-sm-font-size: var(--font-size-14);
+  --text-body-sm-font-weight: var(--font-weight-regular);
+  --text-body-sm-line-height: var(--line-height-20);
+
+  --text-body-xs-font-family: var(--font-family-aeonik);
+  --text-body-xs-font-size: var(--font-size-12);
+  --text-body-xs-font-weight: var(--font-weight-regular);
+  --text-body-xs-line-height: var(--line-height-16);
+
+  /* Label */
+  --text-label-lg-font-family: var(--font-family-aeonik);
+  --text-label-lg-font-size: var(--font-size-18);
+  --text-label-lg-font-weight: 500;
+  --text-label-lg-line-height: var(--line-height-24);
+
+  --text-label-md-font-family: var(--font-family-aeonik);
+  --text-label-md-font-size: var(--font-size-16);
+  --text-label-md-font-weight: 500;
+  --text-label-md-line-height: var(--line-height-24);
+
+  --text-label-sm-font-family: var(--font-family-aeonik);
+  --text-label-sm-font-size: var(--font-size-14);
+  --text-label-sm-font-weight: 500;
+  --text-label-sm-line-height: var(--line-height-20);
+
+  --text-label-xs-font-family: var(--font-family-aeonik);
+  --text-label-xs-font-size: var(--font-size-12);
+  --text-label-xs-font-weight: 500;
+  --text-label-xs-line-height: var(--line-height-16);
+}
+
+/* ============================================
+   DARK MODE - Applied when [data-theme="dark"]
+   ============================================ */
+
+[data-theme='dark'] {
+  /* Brand Colors */
+  --color-light-brand-primary: #121212;
+  --color-light-brand-primary-alternative: #a68efc;
+  --color-light-brand-secondary: #272727;
+  --color-light-brand-tertiary: #383838;
+  --color-light-brand-content: #e2dbff;
+  --color-light-brand-content-contrast: #000000;
+
+  /* Content Colors */
+  --color-light-content-primary: #ffffff;
+  --color-light-content-secondary: #e6e6e6;
+  --color-light-content-tertiary: #b3b3b3;
+  --color-light-content-contrast: #909090;
+  --color-light-content-disabled: #5b5b5b;
+  --color-light-content-inverse: #000000;
+  --color-light-content-brand: #a68efc;
+
+  /* Stroke Colors */
+  --color-light-stroke-primary: #383838;
+  --color-light-stroke-secondary: #4d4d4d;
+  --color-light-stroke-tertiary: #0e0e0e;
+  --color-light-stroke-contrast: #000000;
+
+  /* Background Surface Colors */
+  --color-light-background-surface-color: #ffffff;
+  --color-light-background-surface-primary: #1d1d1d;
+  --color-light-background-surface-secondary: #121212;
+  --color-light-background-surface-disabled: #0d0d0d;
+  --color-light-background-surface-contrast: #272727;
+  --color-light-background-surface-pressed: #383838;
+  --color-light-background-surface-brand: #a68efc;
+
+  /* Background Base Colors */
+  --color-light-background-base-primary: #000000;
+  --color-light-background-base-secondary: #121212;
+
+  /* Container Colors */
+  --color-light-container-primary: #272727;
+  --color-light-container-secondary: #272727;
+  --color-light-container-tertiary: #383838;
+  --color-light-container-contrast: #ffffff;
+  --color-light-container-inverse: #fafafa;
+
+  /* Semantic Colors */
+  --color-light-semantic-neutral: #ffffff;
+  --color-light-semantic-notice: #ffb117;
+  --color-light-semantic-positive: #25a750;
+  --color-light-semantic-negative: #ca3f64;
+  --color-light-semantic-informative: #5f6fff;
+  --color-light-semantic-highlight: #a68efc;
+
+  /* Data Visualization Colors */
+  --color-light-data-viz-category-01: #5f6fff;
+  --color-light-data-viz-category-02: #ffb117;
+  --color-light-data-viz-category-03: #a68efc;
+  --color-light-data-viz-category-04: #00bc4b;
+  --color-light-data-viz-category-05: #f5384f;
+}
