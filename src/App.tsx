@@ -1,5 +1,15 @@
+import { Routes, Route } from 'react-router-dom'
+import Layout from './components/Layout'
 import Home from './pages/Home'
+import Works from './pages/Works'
 
 export default function App() {
-  return <Home />
+  return (
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="works" element={<Works />} />
+      </Route>
+    </Routes>
+  )
 }

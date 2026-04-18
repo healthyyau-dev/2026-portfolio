@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 import styles from './SideNav.module.css'
 
 // Figma asset URLs — valid 7 days
@@ -9,14 +10,13 @@ const ICON_EXP      = 'https://www.figma.com/api/mcp/asset/5513de7c-2bc3-4bd8-8b
 const ICON_CONTACT  = 'https://www.figma.com/api/mcp/asset/344b6b59-90cb-49b9-83e4-645ace28a818'
 const ICON_SETTINGS = 'https://www.figma.com/api/mcp/asset/5dbdde70-1359-42d9-8d55-537fa06fc0cd'
 const AVATAR_IMG    = 'https://www.figma.com/api/mcp/asset/74122a61-44bc-4ebc-879b-e1cdc6d234ec'
-const AVATAR_RING   = 'https://www.figma.com/api/mcp/asset/eddede4e-b608-48a4-878e-1e13a6ee25b4'
 
 const navItems = [
-  { id: 'home',        label: 'Home',        icon: ICON_HOME,     active: true },
-  { id: 'works',       label: 'Works',       icon: ICON_WORKS },
-  { id: 'thoughts',    label: 'Thoughts',    icon: ICON_THOUGHTS },
-  { id: 'experiences', label: 'Experiences', icon: ICON_EXP },
-  { id: 'contact',     label: 'Contact',     icon: ICON_CONTACT },
+  { id: 'home',        label: 'Home',        icon: ICON_HOME,     path: '/' },
+  { id: 'works',       label: 'Works',       icon: ICON_WORKS,    path: '/works' },
+  { id: 'thoughts',    label: 'Thoughts',    icon: ICON_THOUGHTS, path: '/thoughts' },
+  { id: 'experiences', label: 'Experiences', icon: ICON_EXP,      path: '/experiences' },
+  { id: 'contact',     label: 'Contact',     icon: ICON_CONTACT,  path: '/contact' },
 ]
 
 export default function SideNav() {
@@ -25,7 +25,14 @@ export default function SideNav() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [isDark, setIsDark] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
-  const itemsGroupRef = useRef<HTMLDivElement>(null)
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  // Determine active item from current route
+  const activeId = navItems.find(item => {
+    if (item.path === '/') return location.pathname === '/'
+    return location.pathname.startsWith(item.path)
+  })?.id ?? 'home'
 
   // Initialise theme from localStorage or system preference
   useEffect(() => {
@@ -64,6 +71,11 @@ export default function SideNav() {
     return () => document.removeEventListener('mousedown', handler)
   }, [menuOpen])
 
+  const handleNav = (path: string) => {
+    navigate(path)
+    setMenuOpen(false)
+  }
+
   return (
     <>
     {/* SVG filter definitions — used by .iconActive CSS class */}
@@ -95,19 +107,22 @@ export default function SideNav() {
       {/* Mobile hamburger dropdown */}
       {isMobile && (
         <div className={`${styles.mobileMenu} ${menuOpen ? styles.mobileMenuOpen : ''}`}>
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              className={`${styles.item} ${item.active ? styles.itemActive : ''}`}
-              aria-label={item.label}
-              onClick={() => setMenuOpen(false)}
-            >
-              <img src={item.icon} alt="" className={`${styles.icon} ${item.active ? styles.iconActive : ''}`} />
-              <span className={`${styles.mobileMenuLabel} ${item.active ? styles.labelActive : styles.labelInactive}`}>
-                {item.label}
-              </span>
-            </button>
-          ))}
+          {navItems.map((item) => {
+            const isActive = item.id === activeId
+            return (
+              <button
+                key={item.id}
+                className={`${styles.item} ${isActive ? styles.itemActive : ''}`}
+                aria-label={item.label}
+                onClick={() => handleNav(item.path)}
+              >
+                <img src={item.icon} alt="" className={`${styles.icon} ${isActive ? styles.iconActive : ''}`} />
+                <span className={`${styles.mobileMenuLabel} ${isActive ? styles.labelActive : styles.labelInactive}`}>
+                  {item.label}
+                </span>
+              </button>
+            )
+          })}
           <div className={styles.mobileMenuDivider} />
           <button className={styles.item} aria-label="Toggle theme" onClick={() => { toggleTheme(); setMenuOpen(false) }}>
             <img src={ICON_SETTINGS} alt="" className={styles.icon} />
@@ -120,18 +135,37 @@ export default function SideNav() {
 
         {/* Nav items — hidden on mobile */}
         <div className={`${styles.list} ${isMobile ? styles.listHidden : ''}`}>
-          <div className={styles.itemsGroup} ref={itemsGroupRef}>
-            <div className={styles.activeBg} />
-            <div className={styles.activeBar} />
+          <div className={styles.itemsGroup}>
+            {/* Active background pill — translates to the active item's position */}
+            <div
+              className={styles.activeBg}
+              style={{
+                transform: `translateY(${navItems.findIndex(i => i.id === activeId) * 60}px)`
+              }}
+            />
+            <div
+              className={styles.activeBar}
+              style={{
+                transform: `translateY(${navItems.findIndex(i => i.id === activeId) * 60}px)`
+              }}
+            />
 
-            {navItems.map((item) => (
-              <button key={item.id} className={`${styles.item} ${item.active ? styles.itemActive : ''}`} aria-label={item.label}>
-                <img src={item.icon} alt="" className={`${styles.icon} ${item.active ? styles.iconActive : ''}`} />
-                <span className={`${styles.label} ${item.active ? styles.labelActive : styles.labelInactive}`}>
-                  {item.label}
-                </span>
-              </button>
-            ))}
+            {navItems.map((item) => {
+              const isActive = item.id === activeId
+              return (
+                <button
+                  key={item.id}
+                  className={`${styles.item} ${isActive ? styles.itemActive : ''}`}
+                  aria-label={item.label}
+                  onClick={() => handleNav(item.path)}
+                >
+                  <img src={item.icon} alt="" className={`${styles.icon} ${isActive ? styles.iconActive : ''}`} />
+                  <span className={`${styles.label} ${isActive ? styles.labelActive : styles.labelInactive}`}>
+                    {item.label}
+                  </span>
+                </button>
+              )
+            })}
           </div>
         </div>
 

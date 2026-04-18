@@ -1,29 +1,4 @@
-.page {
-  display: flex;
-  align-items: stretch;
-  height: 100vh;
-  width: 100vw;
-  /* Transparent so the fixed canvas shows through, body provides base color */
-  background: transparent;
-  overflow: hidden;
-  /* 24px margin all sides, 24px gap between nav and content — matches Figma */
-  padding: 24px;
-  gap: 24px;
-  /* Sit above the fixed particle canvas (z-index: 0) */
-  position: relative;
-  z-index: 1;
-}
-
-/* ── Content ─────────────────────────────── */
-.content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  position: relative;
-}
-
-/* ── Hero ────────────────────────────────── */
+/* ── Hero — fills the content column from Layout ─────────────────── */
 .hero {
   flex: 1;
   display: flex;
@@ -33,11 +8,10 @@
   padding-left: 80px;
 }
 
-/* ── Hero text ───────────────────────────── */
+/* ── Hero text ───────────────────────────────────────────────────── */
 .heroText {
   position: relative;
   z-index: 1;
-  /* Let text span naturally — icon grid overlays the right half absolutely */
   min-width: 0;
 }
 
@@ -46,13 +20,11 @@
   flex-direction: column;
   font-family: var(--font-family);
   font-weight: 700;
-  /* line-height matches Figma 2-line block: ~77px per line at 72px font */
   line-height: 1.07;
   letter-spacing: 0.01em;
 }
 
 .headingLine1 {
-  /* h2 token: 72px — responsive down to 36px on small screens */
   font-size: clamp(36px, 5vw, 72px);
   color: var(--color-content-primary);
   font-weight: 100;
@@ -68,34 +40,14 @@
   white-space: nowrap;
 }
 
-/* ── Icon grid area ──────────────────────── */
-.gridArea {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 60%;
-  pointer-events: none;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
 
-/* ── 768px — narrower content, nav stays vertical ───────────── */
 @media (max-width: 768px) {
   .hero {
     padding-left: 40px;
   }
 }
 
-/* ── Mobile (≤400px) — nav becomes horizontal top bar ─────── */
 @media (max-width: 400px) {
-  .page {
-    flex-direction: column;
-    padding: 16px;
-    gap: 24px;
-  }
-
   .hero {
     padding: 0 32px 64px 32px;
     justify-content: flex-start;

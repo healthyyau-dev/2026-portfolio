@@ -1,60 +1,184 @@
+/* ── Wrapper ──────────────────────────────────────────────────────── */
+/*
+ * Large enough to contain the isometric visual footprint of the flat
+ * 2196 × 682 px container. Radial mask fades the edges so the grid
+ * dissolves naturally into the dark background.
+ */
 .wrapper {
-  position: absolute;
-  right: -120px;
-  bottom: -80px;
-  width: 680px;
-  height: 620px;
+  position: fixed;
+  right: -300px;
+  bottom: -150px;
+  width: 1800px;
+  height: 1100px;
   pointer-events: none;
-  /* Fade out at edges */
+  z-index: 0;
   mask-image: radial-gradient(
-    ellipse 80% 80% at 60% 60%,
-    black 40%,
-    transparent 80%
+    ellipse 72% 72% at 62% 58%,
+    black 28%,
+    transparent 72%
   );
   -webkit-mask-image: radial-gradient(
-    ellipse 80% 80% at 60% 60%,
-    black 40%,
-    transparent 80%
+    ellipse 72% 72% at 62% 58%,
+    black 28%,
+    transparent 72%
   );
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(5, 100px);
-  grid-template-rows: repeat(4, 100px);
-  gap: 12px;
-
-  /* Isometric-style perspective transform matching the Figma design */
-  transform:
-    perspective(900px)
-    rotateX(48deg)
-    rotateZ(-30deg)
-    translateY(-40px);
+/* ── Container — true isometric projection ───────────────────────── */
+/*
+ * Fast Isometric plugin W:80 H:40 D:80 → rotateX(60deg) rotateZ(45deg)
+ * NO perspective() → orthographic projection = true isometric
+ */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16.654px;
+  transform: rotateX(60deg) rotateZ(45deg);
   transform-origin: center center;
+  transform-style: preserve-3d;
+  /* Center within wrapper */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -341px;   /* half of flat height (682 / 2) */
+  margin-left: -1098px; /* half of flat width  (2196 / 2) */
+}
+
+/* ── Row sizing ──────────────────────────────────────────────────── */
+.rowSmall {
+  display: flex;
+  flex-direction: row;
+  gap: 16.654px;
+  align-items: flex-start;
   transform-style: preserve-3d;
 }
 
-.tile {
-  width: 100px;
-  height: 100px;
+.rowLarge {
+  display: flex;
+  flex-direction: row;
+  gap: 18.455px;
+  align-items: flex-start;
+  transform-style: preserve-3d;
+}
+
+/* ── Small tile (Row 1 & 4): 149.89 × 149.89 px ─────────────────── */
+.tileSmall {
+  width: 149.89px;
+  height: 149.89px;
+  flex-shrink: 0;
+  border-radius: 33.309px;
+  border: 2.082px solid rgba(255, 255, 255, 0.04);
+  background: linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0) 100%);
+  box-shadow: inset 0px 1.5px 4px rgba(255, 255, 255, 0.08);
+  opacity: 0.95;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 20px;
-  background: var(--color-container-primary);
-  border: 1px solid var(--color-stroke-primary);
-  color: var(--color-content-tertiary);
-  box-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(255, 255, 255, 0.04) inset;
-  transition: background 0.2s ease;
+  transform-style: preserve-3d;
 }
 
-.tile.highlight {
-  background: linear-gradient(145deg, #5d3fd3 0%, #3a1fa8 100%);
-  border-color: rgba(166, 142, 252, 0.3);
-  color: #ffffff;
+/* ── Token image tile (small) ────────────────────────────────────── */
+.tokenSmall {
+  width: 149.89px;
+  height: 149.89px;
+  flex-shrink: 0;
+  border-radius: 33.309px;
+  overflow: hidden;
+  position: relative;
+  opacity: 0.95;
+}
+
+/* ── Large tile (Row 2 & 3): 166.094 × 166.094 px ───────────────── */
+.tileLarge {
+  width: 166.094px;
+  height: 166.094px;
+  flex-shrink: 0;
+  border-radius: 36.91px;
+  border: 2.307px solid rgba(255, 255, 255, 0.04);
+  background: linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0) 100%);
+  box-shadow: inset 0px 1.5px 4px rgba(255, 255, 255, 0.08);
+  opacity: 0.95;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+
+/* ── Token image tile (large) ────────────────────────────────────── */
+.tokenLarge {
+  width: 166.094px;
+  height: 166.094px;
+  flex-shrink: 0;
+  border-radius: 36.91px;
+  overflow: hidden;
+  position: relative;
+  opacity: 0.95;
+}
+
+/* ── Shared token image fill ─────────────────────────────────────── */
+.tokenImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Icon wrappers — counter-rotate to face viewer ───────────────── */
+/*
+ * Parent has rotateX(60deg) rotateZ(45deg).
+ * Inverse: rotateZ(-45deg) rotateX(-60deg) → icon faces screen directly.
+ */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotateZ(-45deg) rotateX(-60deg);
+}
+
+/* rot: true icons also get a 45° in-plane rotation (matching the flat design) */
+.iconRot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotateZ(-45deg) rotateX(-60deg) rotate(45deg);
+}
+
+/* ── Icon images ─────────────────────────────────────────────────── */
+.iconImgSm {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
+  opacity: 0.85;
+}
+
+.iconImgLg {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
+  opacity: 0.85;
+}
+
+/* ── Featured Figma tile ─────────────────────────────────────────── */
+.featured {
+  opacity: 1 !important;
+  border: 0.13px solid #c189ff !important;
+  background: rgba(0, 0, 0, 0) !important;
   box-shadow:
-    0 4px 20px rgba(90, 60, 200, 0.5),
-    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+    0px 18.455px 22.598px rgba(190, 132, 255, 0.35),
+    inset 0px 1.5px 4px rgba(193, 137, 255, 0.08);
+  /* Float tile above the isometric plane */
+  transform: translateZ(20px);
+  transform-style: preserve-3d;
+}
+
+.featuredImg {
+  width: 44px;
+  height: 60px;
+  object-fit: contain;
+  display: block;
+  opacity: 1;
 }

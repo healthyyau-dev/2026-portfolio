@@ -1,0 +1,77 @@
+.page {
+  display: flex;
+  align-items: stretch;
+  height: 100vh;
+  width: 100vw;
+  background: transparent;
+  overflow: hidden;
+  padding: 24px;
+  gap: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Content column ──────────────────────────────────────────────── */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* hide scrollbar — scroll still works, just invisible */
+  scrollbar-width: none;
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Animated slide wrapper (re-keyed on route change) ───────────── */
+.slide {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* Entry from below (navigating forward / scrolling down) */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(48px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Entry from above (navigating backward / scrolling up) */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-48px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fromBottom {
+  animation: slideUp 0.45s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.fromTop {
+  animation: slideDown 0.45s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+@media (max-width: 400px) {
+  .page {
+    flex-direction: column;
+    padding: 16px;
+    gap: 24px;
+  }
+}

@@ -97,6 +97,7 @@
   background: var(--color-bg-surface);
   border-radius: 16px;
   pointer-events: none;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Purple 2px pill bar on left edge */
@@ -110,6 +111,7 @@
   border-radius: 0 26px 42px 0;
   box-shadow: 0 4px 37.6px 29px color-mix(in srgb, var(--color-brand-primary-alt) 28%, transparent);
   pointer-events: none;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
