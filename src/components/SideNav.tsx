@@ -2,13 +2,13 @@ import { useState, useEffect, useRef } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import styles from './SideNav.module.css'
 
-// Figma asset URLs — valid 7 days
-const ICON_HOME     = 'https://www.figma.com/api/mcp/asset/e7c3c926-5c60-4d08-a8b6-baaa66075475'
-const ICON_WORKS    = 'https://www.figma.com/api/mcp/asset/8cadabe1-9e0a-4dd1-a82f-9edfad58c627'
-const ICON_THOUGHTS = 'https://www.figma.com/api/mcp/asset/6175b54d-9a68-4675-afb6-5ff38742520b'
-const ICON_EXP      = 'https://www.figma.com/api/mcp/asset/5513de7c-2bc3-4bd8-8be7-c0b8a26076c9'
-const ICON_CONTACT  = 'https://www.figma.com/api/mcp/asset/344b6b59-90cb-49b9-83e4-645ace28a818'
-const ICON_SETTINGS = 'https://www.figma.com/api/mcp/asset/5dbdde70-1359-42d9-8d55-537fa06fc0cd'
+// Local icon assets — served from /public/icons/
+const ICON_HOME     = '/icons/home.svg'
+const ICON_WORKS    = '/icons/works.svg'
+const ICON_THOUGHTS = '/icons/thoughts.svg'
+const ICON_EXP      = '/icons/experiences.svg'
+const ICON_CONTACT  = '/icons/contact.svg'
+const ICON_SETTINGS = '/icons/settings.svg'
 const AVATAR_IMG    = 'https://www.figma.com/api/mcp/asset/74122a61-44bc-4ebc-879b-e1cdc6d234ec'
 
 const navItems = [
@@ -24,6 +24,7 @@ export default function SideNav() {
   const [isMobile, setIsMobile] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [isDark, setIsDark] = useState(false)
+  const [avatarLoaded, setAvatarLoaded] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
   const navigate = useNavigate()
   const location = useLocation()
@@ -176,9 +177,15 @@ export default function SideNav() {
             <span className={`${styles.label} ${styles.labelInactive}`}>{isDark ? 'Light mode' : 'Dark mode'}</span>
           </button>
 
-          <div className={styles.avatarRow}>
+          <div className={`${styles.avatarRow} ${avatarLoaded ? styles.avatarRowVisible : ''}`}>
             <div className={styles.avatarWrap}>
-              <img src={AVATAR_IMG} alt="Profile" className={styles.avatar} />
+              <img
+                src={AVATAR_IMG}
+                alt="Profile"
+                className={`${styles.avatar} ${avatarLoaded ? styles.avatarLoaded : ''}`}
+                onLoad={() => setAvatarLoaded(true)}
+                ref={(el) => { if (el?.complete) setAvatarLoaded(true) }}
+              />
             </div>
             <div className={`${styles.avatarText} ${styles.label}`}>
               <span className={styles.avatarRole}>Product Designer</span>
@@ -191,7 +198,13 @@ export default function SideNav() {
         {isMobile && (
           <div className={styles.mobileBar}>
             <div className={styles.avatarWrap}>
-              <img src={AVATAR_IMG} alt="Profile" className={styles.avatar} />
+              <img
+                src={AVATAR_IMG}
+                alt="Profile"
+                className={`${styles.avatar} ${avatarLoaded ? styles.avatarLoaded : ''}`}
+                onLoad={() => setAvatarLoaded(true)}
+                ref={(el) => { if (el?.complete) setAvatarLoaded(true) }}
+              />
             </div>
             <span className={styles.mobileName}>
               <span className={styles.mobileActiveBar} />

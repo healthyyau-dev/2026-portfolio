@@ -12,7 +12,7 @@ const ROUTES = ['/', '/works', '/thoughts', '/experiences', '/contact']
 export default function Layout() {
   const navigate    = useNavigate()
   const location    = useLocation()
-  const contentRef  = useRef<HTMLElement>(null)
+  const contentRef  = useRef<HTMLDivElement>(null)
   const busy        = useRef(false)          // cooldown flag
   const [dir, setDir] = useState<'down' | 'up'>('down')  // for CSS animation
 
@@ -75,13 +75,15 @@ export default function Layout() {
           without being broken by the slide animation's CSS transform */}
       {isHome && <IconGrid />}
       <SideNav />
-      <main ref={contentRef} className={styles.content}>
-        {/* key re-mounts the outlet so the CSS entry animation fires on every route change */}
-        <div
-          key={location.pathname}
-          className={`${styles.slide} ${dir === 'down' ? styles.fromBottom : styles.fromTop}`}
-        >
-          <Outlet />
+      <main className={styles.content}>
+        <div ref={contentRef} className={styles.scrollInner}>
+          {/* key re-mounts the outlet so the CSS entry animation fires on every route change */}
+          <div
+            key={location.pathname}
+            className={`${styles.slide} ${dir === 'down' ? styles.fromBottom : styles.fromTop}`}
+          >
+            <Outlet />
+          </div>
         </div>
       </main>
     </div>

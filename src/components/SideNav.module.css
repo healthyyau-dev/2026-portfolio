@@ -98,6 +98,8 @@
   border-radius: 16px;
   pointer-events: none;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  animation: itemFadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.5s forwards;
 }
 
 /* Purple 2px pill bar on left edge */
@@ -112,6 +114,8 @@
   box-shadow: 0 4px 37.6px 29px color-mix(in srgb, var(--color-brand-primary-alt) 28%, transparent);
   pointer-events: none;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  animation: itemFadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.5s forwards;
 }
 
 
@@ -133,6 +137,34 @@
   position: relative;
   z-index: 1;
   transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  animation: itemFadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Cascade in: nav items first, then footer (theme toggle + avatar).
+   nth-of-type targets buttons; activeBg/activeBar (divs) are skipped. */
+.itemsGroup button:nth-of-type(1) { animation-delay: 0.10s; }
+.itemsGroup button:nth-of-type(2) { animation-delay: 0.18s; }
+.itemsGroup button:nth-of-type(3) { animation-delay: 0.26s; }
+.itemsGroup button:nth-of-type(4) { animation-delay: 0.34s; }
+.itemsGroup button:nth-of-type(5) { animation-delay: 0.42s; }
+.footer .item { animation-delay: 0.5s; }
+/* Avatar row fades in once the image has loaded.
+   Both transitions declared here so the higher specificity doesn't
+   clobber the padding-left hover transition on .avatarRow. */
+.footer .avatarRow {
+  opacity: 0;
+  transition:
+    opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    padding-left 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer .avatarRowVisible {
+  opacity: 1;
+}
+
+@keyframes itemFadeIn {
+  to { opacity: 1; }
 }
 
 .item:hover {
@@ -244,6 +276,16 @@
   border-radius: 999px;
   border: 2px solid rgba(166, 142, 252, 0.4);
   box-shadow: 0 0 10px 2px rgba(166, 142, 252, 0.2);
+}
+
+/* Subtle placeholder inside the ring so empty pre-load state isn't jarring */
+.avatarWrap::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border-radius: 999px;
+  background: var(--color-bg-surface);
+  z-index: 0;
 }
 
 /* Actual avatar photo */
