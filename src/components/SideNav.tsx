@@ -9,7 +9,7 @@ const ICON_THOUGHTS = '/icons/thoughts.svg'
 const ICON_EXP      = '/icons/experiences.svg'
 const ICON_CONTACT  = '/icons/contact.svg'
 const ICON_SETTINGS = '/icons/settings.svg'
-const AVATAR_IMG    = 'https://www.figma.com/api/mcp/asset/74122a61-44bc-4ebc-879b-e1cdc6d234ec'
+const AVATAR_IMG    = '/avatar.png'
 
 const navItems = [
   { id: 'home',        label: 'Home',        icon: ICON_HOME,     path: '/' },

@@ -90,13 +90,12 @@
 .rowSmall > *:nth-child(12), .rowLarge > *:nth-child(12) { --i: 11; }
 .rowSmall > *:nth-child(13), .rowLarge > *:nth-child(13) { --i: 12; }
 
-/* Per-row base delay — each row waits for the previous row's last tile
-   to fully descend before starting. Row counts: 12 / 11 / 13 / 8 tiles.
-   row-finishes = row-delay + (N-1)*45ms + 400ms animation duration. */
-.container > *:nth-child(1) { --row-delay: 0.5s;   } /* finishes at 1.395s */
-.container > *:nth-child(2) { --row-delay: 1.395s; } /* finishes at 2.245s */
-.container > *:nth-child(3) { --row-delay: 2.245s; } /* finishes at 3.185s */
-.container > *:nth-child(4) { --row-delay: 3.185s; } /* finishes at 3.9s   */
+/* Per-row base delay — each row starts as the previous row's first tile lands
+   (row-delay + 400ms), so rows overlap mid-stagger for a rolling wave effect. */
+.container > *:nth-child(1) { --row-delay: 0.5s; }
+.container > *:nth-child(2) { --row-delay: 0.9s; }
+.container > *:nth-child(3) { --row-delay: 1.3s; }
+.container > *:nth-child(4) { --row-delay: 1.7s; }
 
 @keyframes tileDescend {
   to { transform: translateZ(0); }

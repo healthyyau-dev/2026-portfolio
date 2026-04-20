@@ -49,6 +49,7 @@
   width: 100%;
   /* Figma: 420 × 320px — aspect-ratio scales it correctly at any card width */
   aspect-ratio: 420 / 320;
+  max-height: 240px;
   background: #0a0a0a;
   flex-shrink: 0;
   overflow: hidden;
@@ -201,13 +202,19 @@
 }
 
 /* ── Responsive ──────────────────────────────────────────────────── */
-@media (max-width: 900px) {
+@media (max-width: 1440px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1280px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
   }

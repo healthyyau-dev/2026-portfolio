@@ -294,6 +294,7 @@
   height: 40px;
   border-radius: 999px;
   object-fit: cover;
+  object-position: center top;
   position: relative;
   z-index: 1;
 }
@@ -455,7 +456,7 @@
     top: calc(100% + 8px);
     left: 0;
     right: 0;
-    background-color: var(--color-bg-base);
+    background-color: rgba(10, 10, 10, 0.72);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-radius: 20px;

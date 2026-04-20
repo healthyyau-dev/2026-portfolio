@@ -34,7 +34,7 @@ type SvgCmp = FC<SVGProps<SVGSVGElement>>
 type Tile =
   | { k: 'empty' }
   | { k: 'img';      src: string }
-  | { k: 'icon';     src: string; rot?: true }
+  | { k: 'icon';     src: string; rot?: true; grayscale?: true; rotate?: number }
   | { k: 'svg';      Cmp: SvgCmp; rot?: true }
   | { k: 'featured' }
 
@@ -46,11 +46,11 @@ const ROW1: Tile[] = [
   { k: 'empty' }, { k: 'empty' }, { k: 'empty' }, { k: 'empty' },
   { k: 'icon', src: ANTHROPIC },
   { k: 'img',  src: TOK_R1 },
-  { k: 'icon', src: GROUP_A,    rot: true },
+  { k: 'icon', src: GROUP_A,    rot: true, rotate: 90 },
   { k: 'svg',  Cmp: ClaudeIcon },
   { k: 'svg',  Cmp: OpenAIIcon },
   { k: 'icon', src: PERPLEXITY, rot: true },
-  { k: 'icon', src: OPENCLAW,   rot: true },
+  { k: 'icon', src: OPENCLAW,   rot: true, grayscale: true },
   { k: 'icon', src: NANO,       rot: true },
 ]
 
@@ -98,7 +98,12 @@ function SmTile({ tile }: { tile: Tile }) {
   if (tile.k === 'icon') return (
     <div className={styles.tileSmall}>
       <div className={tile.rot ? styles.iconRot : styles.icon}>
-        <img src={tile.src} alt="" className={styles.iconImgSm} />
+        <img
+          src={tile.src}
+          alt=""
+          className={`${styles.iconImgSm} ${tile.grayscale ? styles.tokenImgGrayscale : ''}`}
+          style={tile.rotate !== undefined ? { transform: `rotate(${tile.rotate}deg)` } : undefined}
+        />
       </div>
     </div>
   )
@@ -134,7 +139,12 @@ function LgTile({ tile }: { tile: Tile }) {
   if (tile.k === 'icon') return (
     <div className={styles.tileLarge}>
       <div className={tile.rot ? styles.iconRot : styles.icon}>
-        <img src={tile.src} alt="" className={styles.iconImgLg} />
+        <img
+          src={tile.src}
+          alt=""
+          className={styles.iconImgLg}
+          style={tile.rotate !== undefined ? { transform: `rotate(${tile.rotate}deg)` } : undefined}
+        />
       </div>
     </div>
   )
